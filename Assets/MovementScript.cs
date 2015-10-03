@@ -4,7 +4,7 @@ using System.Collections;
 public class MovementScript : MonoBehaviour {
 
 	//Base speed
-	public float baseSpeed = 0;
+	private float baseSpeed = 0;
 	private  const int DELAY = 10;
 	// Use this for initialization
 	void Start () {
