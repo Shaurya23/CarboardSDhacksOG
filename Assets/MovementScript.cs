@@ -5,6 +5,7 @@ public class MovementScript : MonoBehaviour {
 
 	//Base speed
 	public float baseSpeed = .5f;
+	private  const int DELAY = 10;
 	// Use this for initialization
 	void Start () {
 
@@ -14,7 +15,7 @@ public class MovementScript : MonoBehaviour {
 	void Update () {	
 		// Move in the direction of the camera.
 		transform.position = transform.position + Camera.main.transform.forward * baseSpeed * Time.deltaTime;
-		if (Time.time > 5) {
+		if (Time.time > DELAY) {
 			// Update the speed after 5 seconds
 			baseSpeed = 5;
 		}
