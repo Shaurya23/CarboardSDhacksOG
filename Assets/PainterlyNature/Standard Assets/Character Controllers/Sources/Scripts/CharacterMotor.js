@@ -21,20 +21,20 @@ var inputJump : boolean = false;
 
 class CharacterMotorMovement {
 	// The maximum horizontal speed when moving
-	var maxForwardSpeed : float = 10.0;
-	var maxSidewaysSpeed : float = 10.0;
-	var maxBackwardsSpeed : float = 10.0;
+	var maxForwardSpeed : float = 1.0;
+	var maxSidewaysSpeed : float = 1.0;
+	var maxBackwardsSpeed : float = 1.0;
 	
 	// Curve for multiplying speed based on slope (negative = downwards)
 	var slopeSpeedMultiplier : AnimationCurve = AnimationCurve(Keyframe(-90, 1), Keyframe(0, 1), Keyframe(90, 0));
 	
 	// How fast does the character change speeds?  Higher is faster.
-	var maxGroundAcceleration : float = 30.0;
-	var maxAirAcceleration : float = 20.0;
+	var maxGroundAcceleration : float = 0.0;
+	var maxAirAcceleration : float = 0.0;
 
 	// The gravity for the character
-	var gravity : float = 10.0;
-	var maxFallSpeed : float = 20.0;
+	var gravity : float = 0.0;
+	var maxFallSpeed : float = 0.0;
 	
 	// For the next variables, @System.NonSerialized tells Unity to not serialize the variable or show it in the inspector view.
 	// Very handy for organization!
@@ -185,10 +185,11 @@ private function UpdateFunction () {
 	var velocity : Vector3 = movement.velocity;
 	
 	// Update velocity based on input
-	velocity = ApplyInputVelocityChange(velocity);
+	var distance : float = 5;
+	velocity = Camera.main.transform.forward * distance;
 	
 	// Apply gravity and jumping force
-	velocity = ApplyGravityAndJumping (velocity);
+	//velocity = ApplyGravityAndJumping (velocity);
 	
 	// Moving platform support
 	var moveDistance : Vector3 = Vector3.zero;
