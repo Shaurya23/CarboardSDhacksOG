@@ -13,7 +13,7 @@ public class ExitGame : MonoBehaviour {
 	}
 	
 	void CloseGame() {
-		Application.Quit ();
+		Application.LoadLevel ("safeScene");
 	}
 
 	void PauseGame() {
