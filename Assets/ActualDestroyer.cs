@@ -18,7 +18,7 @@ public class ActualDestroyer : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other)
 	{
-		if(other.tag == "monster" && other != null)
+		if(other != null && other.tag == "monster")
 		{
 			GetComponent<MovementScript>().baseSpeed++;
 			jellyCount++;
