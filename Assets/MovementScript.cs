@@ -14,8 +14,14 @@ public class MovementScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {	
+	    Vector3 temp;
 		// Move in the direction of the camera.
-		transform.position = transform.position + Camera.main.transform.forward * baseSpeed * Time.deltaTime;
+		temp = Camera.main.transform.forward * baseSpeed * Time.deltaTime;
+		temp.y = Mathf.Min (temp.y, baseSpeed / 2);
+		temp = transform.position + temp;
+		temp.y = Mathf.Max (transform.position.y, 41);
+		transform.position = temp;
+
 		if (Time.time > DELAY) {
 			// Update the speed after 5 seconds
 			baseSpeed = 2;
