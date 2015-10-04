@@ -5,7 +5,7 @@ using System.Collections;
 using System.Text;
 
 public class LevelUp : MonoBehaviour {
-	String txt = "1";
+	String txt = "0";
 
 	void OnEnable() {
 		Destroyer.levelUp += incrementLevel;

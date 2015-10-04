@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Destroyer : MonoBehaviour {
-
+	int jellyCount = 0;
 	public delegate void LevelAction();
 	public static event LevelAction levelUp;
 	public int DELAY = 10;
@@ -10,7 +10,8 @@ public class Destroyer : MonoBehaviour {
 	{
 		if(other.tag == "monster")
 		{
-			Debug.Log("Collision");
+			GetComponent<MovementScript>().baseSpeed++;
+			jellyCount++;
 			if (levelUp != null) {
 				levelUp();
 			}
