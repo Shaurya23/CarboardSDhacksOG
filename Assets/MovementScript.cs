@@ -22,11 +22,7 @@ public class MovementScript : MonoBehaviour {
 			// Move in the direction of the camera.
 			temp = Camera.main.transform.forward * baseSpeed * Time.deltaTime;
 			temp = transform.position + temp;
-			temp.y = Mathf.Max (transform.position.y, 0);
-//			temp.x = Mathf.Max (transform.position.x, -325);
-//			temp.x = Mathf.Min (transform.position.x, 20);
-//			temp.z = Mathf.Max (transform.position.z, -255);
-//			temp.z = Mathf.Min (transform.position.z, 2247);
+			temp.y = Mathf.Max (transform.position.y, 40.5f);
 			transform.position = temp;
 
 			if (Time.time > DELAY) {
