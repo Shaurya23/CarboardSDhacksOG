@@ -8,7 +8,6 @@ public class LevelUp : MonoBehaviour {
 	String txt = "1";
 
 	void OnEnable() {
-		Debug.Log ("HERE");
 		Destroyer.levelUp += incrementLevel;
 	}
 	void OnDisable() {
