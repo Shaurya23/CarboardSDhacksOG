@@ -6,7 +6,7 @@ using System.Text;
 
 
 [Serializable]
-public class TypeOutScript : MonoBehaviour {
+public class TypeOutScript1 : MonoBehaviour {
 
 	public bool On = true;
 	public bool reset = false;
@@ -22,7 +22,7 @@ public class TypeOutScript : MonoBehaviour {
 	private float RandomCharacterTime;
 
 	public int i;
-	public int DELAY = 3;
+	public int DELAY = 10;
 
 //	void Start () 
 //	{

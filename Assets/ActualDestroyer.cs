@@ -10,7 +10,7 @@ public class ActualDestroyer : MonoBehaviour {
 	public GameObject flame;
 
 	void Start () {
-		flame = GameObject.Find ("/PopUpForHit");
+		flame = GameObject.Find ("PopUpForHit");
 		
 		flame.SetActive(false);
 
