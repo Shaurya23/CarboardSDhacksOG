@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class ActualDestroyer : MonoBehaviour {
@@ -7,6 +7,15 @@ public class ActualDestroyer : MonoBehaviour {
 	public delegate void LevelAction();
 	public static event LevelAction levelUp;
 	public int DELAY = 3;
+	public GameObject flame;
+
+	void Start () {
+		flame = GameObject.Find ("/PopUpForHit");
+		
+		flame.SetActive(false);
+
+	}
+
 	void OnTriggerEnter (Collider other)
 	{
 		if(other.tag == "monster" && other != null)
@@ -16,7 +25,13 @@ public class ActualDestroyer : MonoBehaviour {
 			if (levelUp != null) {
 				levelUp();
 			}
+			
+			flame.SetActive(true);
+			transform.LookAt (Camera.main.transform);
 		}
 	}
 
+	void OnTriggerExit() {
+		flame.SetActive (false);
+	}
 }
