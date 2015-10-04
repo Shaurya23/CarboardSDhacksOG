@@ -27,7 +27,7 @@ public class MovementScript : MonoBehaviour {
 			baseSpeed = 2;
 		}
 		if (Time.time > DELAY2) {
-			baseSpeed = 12;
+			baseSpeed = 8;
 		}
 	}
 
