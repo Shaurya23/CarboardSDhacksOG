@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Destroyer : MonoBehaviour {
+public class ActualDestroyer : MonoBehaviour {
+
 	int jellyCount = 0;
 	public delegate void LevelAction();
 	public static event LevelAction levelUp;
@@ -17,4 +18,5 @@ public class Destroyer : MonoBehaviour {
 			}
 		}
 	}
+
 }

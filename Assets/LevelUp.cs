@@ -8,11 +8,11 @@ public class LevelUp : MonoBehaviour {
 	String txt = "0";
 
 	void OnEnable() {
-		Destroyer.levelUp += incrementLevel;
+		ActualDestroyer.levelUp += incrementLevel;
 	}
-	void OnDisable() {
-		Destroyer.levelUp -= incrementLevel;
-	}
+	//void OnDisable() {
+	//	ActualDestroyer.levelUp -= incrementLevel;
+	//}
 
 	void incrementLevel() {
 		txt = GetComponent<Text>().text;

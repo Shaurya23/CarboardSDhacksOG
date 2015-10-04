@@ -22,6 +22,7 @@ public class TypeOutScript : MonoBehaviour {
 	private float RandomCharacterTime;
 
 	public int i;
+	public int DELAY = 3;
 
 //	void Start () 
 //	{
@@ -55,6 +56,11 @@ public class TypeOutScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update() 
 	{
+		if (Time.time < DELAY)
+		{
+			return;
+		}
+
 		if (TotalTypeTime != -1f)
 		{
 			TypeRate = TotalTypeTime/(float)FinalText.Length;
