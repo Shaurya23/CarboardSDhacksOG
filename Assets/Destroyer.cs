@@ -5,7 +5,7 @@ public class Destroyer : MonoBehaviour {
 
 	public delegate void LevelAction();
 	public static event LevelAction levelUp;
-
+	public int DELAY = 10;
 	void OnTriggerEnter (Collider other)
 	{
 		if(other.tag == "monster")
@@ -14,7 +14,11 @@ public class Destroyer : MonoBehaviour {
 			if (levelUp != null) {
 				levelUp();
 			}
-			Destroy(other.gameObject, 5);
+			if (Time.time < DELAY) {
+				return;
+			}
+			else
+			Destroy(other.gameObject);
 
 		}
 	}
