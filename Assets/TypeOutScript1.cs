@@ -53,7 +53,7 @@ public class TypeOutScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void OnGUI() 
+	void Update() 
 	{
 		if (TotalTypeTime != -1f)
 		{

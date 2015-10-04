@@ -55,7 +55,7 @@ public class TypeOutScript3 : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void OnGUI() 
+	void Update() 
 	{
 		if (Time.time < DELAY) {
 			return;
