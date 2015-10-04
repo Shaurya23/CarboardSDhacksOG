@@ -25,10 +25,10 @@ public class MovementScript : MonoBehaviour {
 
 		if (Time.time > DELAY) {
 			// Update the speed after 5 seconds
-			baseSpeed = 1;
+			baseSpeed = 2;
 		}
 		if (Time.time > DELAY2) {
-			baseSpeed = 2;
+			baseSpeed = 6;
 		}
 	}
 

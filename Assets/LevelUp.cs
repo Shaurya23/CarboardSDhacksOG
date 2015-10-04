@@ -7,19 +7,20 @@ using System.Text;
 public class LevelUp : MonoBehaviour {
 	String txt = "1";
 
-	void onEnable() {
-
+	void OnEnable() {
+		Debug.Log ("HERE");
+		Destroyer.levelUp += incrementLevel;
 	}
-	void onDisable() {
-
+	void OnDisable() {
+		Destroyer.levelUp -= incrementLevel;
 	}
 
 	void incrementLevel() {
-		txt = GameObject.GetComponent<Text>().text;
+		txt = GetComponent<Text>().text;
 		int levelNum = int.Parse (txt);
 		levelNum++;
-		txt = levelNum.ToString;
-		GameObject.GetComponent<Text>().text = txt;
+		txt = levelNum.ToString();
+		GetComponent<Text>().text = txt;
 	}
 
 }
