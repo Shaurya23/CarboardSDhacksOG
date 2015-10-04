@@ -6,7 +6,7 @@ using System.Text;
 
 
 [Serializable]
-public class TypeOutScript1 : MonoBehaviour {
+public class TypeOutScript : MonoBehaviour {
 
 	public bool On = true;
 	public bool reset = false;

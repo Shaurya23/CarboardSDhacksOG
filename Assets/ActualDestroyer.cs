@@ -10,12 +10,15 @@ public class ActualDestroyer : MonoBehaviour {
 	public GameObject flame;
 
 	void Start () {
+		flame = GameObject.Find ("PopUpForHit");
+		
+		flame.SetActive(false);
 
 	}
 
 	void OnTriggerEnter (Collider other)
 	{
-		if(other.tag == "monster" && other != null)
+		if(other != null && other.tag == "monster")
 		{
 			GetComponent<MovementScript>().baseSpeed++;
 			jellyCount++;
