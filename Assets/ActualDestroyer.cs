@@ -7,12 +7,8 @@ public class ActualDestroyer : MonoBehaviour {
 	public delegate void LevelAction();
 	public static event LevelAction levelUp;
 	public int DELAY = 3;
-	public GameObject flame;
 
 	void Start () {
-		flame = GameObject.Find ("PopUpForHit");
-		
-		flame.SetActive(false);
 
 	}
 
@@ -26,12 +22,9 @@ public class ActualDestroyer : MonoBehaviour {
 				levelUp();
 			}
 			
-			flame.SetActive(true);
-			transform.LookAt (Camera.main.transform);
 		}
 	}
 
 	void OnTriggerExit() {
-		flame.SetActive (false);
 	}
 }

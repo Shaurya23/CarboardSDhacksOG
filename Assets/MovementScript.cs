@@ -6,8 +6,8 @@ public class MovementScript : MonoBehaviour {
 	//Base speed
 	public bool moving = true;
 	public float baseSpeed = 0;
-	private const int DELAY = 25;
-	private const int DELAY2 = 30;
+	private const int DELAY = 30;
+	private const int DELAY2 = 45;
 	// Use this for initialization
 	void Start () {
 
@@ -31,10 +31,10 @@ public class MovementScript : MonoBehaviour {
 
 			if (Time.time > DELAY) {
 				// Update the speed after 5 seconds
-				baseSpeed = 2;
+				baseSpeed = 4;
 			}
 			if (Time.time > DELAY2) {
-				baseSpeed = 6;
+				baseSpeed = 10;
 			}
 		}
 	}
