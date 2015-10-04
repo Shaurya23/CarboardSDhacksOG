@@ -8,9 +8,7 @@ public class ActualDestroyer : MonoBehaviour {
 	public static event LevelAction levelUp;
 	public int DELAY = 3;
 
-	void Start () {
 
-	}
 
 	void OnTriggerEnter (Collider other)
 	{
@@ -25,6 +23,5 @@ public class ActualDestroyer : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit() {
-	}
+
 }
