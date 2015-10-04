@@ -25,11 +25,12 @@ public class ActualDestroyer : MonoBehaviour {
 		{
 			GetComponent<MovementScript>().baseSpeed++;
 			jellyCount++;
+			if (jellyCount > 25){
+				Application.LoadLevel("Credits");
+			}
 			if (levelUp != null) {
 				levelUp();
 			}
-			
-			transform.LookAt (Camera.main.transform);
 			audioSource.PlayOneShot(deathSound);
 		}
 	}
