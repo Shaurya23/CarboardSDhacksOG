@@ -20,7 +20,7 @@ public class MovementScript : MonoBehaviour {
 		temp = Camera.main.transform.forward * baseSpeed * Time.deltaTime;
 		temp.y = Mathf.Min (temp.y, baseSpeed / 2);
 		temp = transform.position + temp;
-		temp.y = Mathf.Max (transform.position.y, 41);
+		temp.y = Mathf.Max (transform.position.y, 40.1f);
 		transform.position = temp;
 
 		if (Time.time > DELAY) {

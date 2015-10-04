@@ -11,10 +11,11 @@ public class Destroyer : MonoBehaviour {
 		if(other.tag == "monster")
 		{
 			Debug.Log("Collision");
-			Destroy(other.gameObject);
 			if (levelUp != null) {
 				levelUp();
 			}
+			Destroy(other.gameObject, 5);
+
 		}
 	}
 }
