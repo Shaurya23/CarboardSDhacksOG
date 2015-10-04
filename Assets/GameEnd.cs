@@ -7,8 +7,7 @@ public class GameEnd : MonoBehaviour {
 	{
 		if(other.tag == "death")
 		{
-			Debug.Log ("Reset");
-			Application.LoadLevel ("ArtScene");
+			Application.LoadLevel ("safeScene");
 		}
 	}
 }
