@@ -8,7 +8,7 @@ public class GameEnd : MonoBehaviour {
 		if(other.tag == "death")
 		{
 			Debug.Log ("Reset");
-			Application.LoadLevel ("PostTextBuild");
+			Application.LoadLevel ("ArtScene");
 		}
 	}
 }
